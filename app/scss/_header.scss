@@ -1,0 +1,49 @@
+.header {
+	height: 800px;
+	width: 100%;
+	padding-top: 36px;
+	background-color: #f3e1d5;
+	background-image: url('../images/src/header-bg 1.jpg');
+	background-size: cover;
+	background-position: center;
+	&__nav-row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__nav {
+		color: #404040;
+		font-family: 'Teko', sans-serif;
+		font-weight: 600;
+		font-size: 23px;
+		text-transform: uppercase;
+		letter-spacing: 0.45px;
+		&-link {
+			color: #404040;
+			&:hover {
+				color: #004cff;
+			}
+		}
+	}
+	&__button {
+		height: 66px;
+		padding-top: 23px;
+		padding-left: 38px;
+		padding-right: 38px;
+		background-color: #004cff;
+		color: $textcolor;
+		font-family: 'Teko', sans-serif;
+		font-weight: 600;
+		line-height: 1;
+		font-size: 23px;
+		text-transform: uppercase;
+		letter-spacing: 0.45px;
+		transition: background-color 0.2s ease-in;
+		&:hover {
+			background-color: #0a3fbb;
+			text-decoration: none;
+			color: $textcolor;
+		}
+	}
+
+}

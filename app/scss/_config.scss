@@ -2,9 +2,9 @@
 
 $accent: orange; // Accent Color
 $fontsize: 16px; // Body Font Size
-$textcolor: #333; // Text Color
+$textcolor: #f8f8f8; // Text Color
 $system: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
-$roboto: Roboto, sans-serif; // Roboto Font Family
+$roboto: Montserrat, sans-serif; // Roboto Font Family
 
 // Bootstrap compatible gutter variable => $gutter
 $grid-gutter-width: 20px;
@@ -29,10 +29,14 @@ $gutter: $grid-gutter-width;
 	}
 }
 
-@include font('Roboto', normal, 400, '../fonts/roboto-regular-webfont.woff2');
-@include font('Roboto', italic, 400, '../fonts/roboto-italic-webfont.woff2');
-@include font('Roboto', normal, 700, '../fonts/roboto-bold-webfont.woff2');
-@include font('Roboto', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2');
+@include font('Montserrat', normal, 700, '../fonts/Montserrat-Bold.woff2');
+@include font('Montserrat', normal, 500, '../fonts/Montserrat-Medium.woff2');
+@include font('Montserrat', normal, 400, '../fonts/Montserrat-Regular.woff2');
+@include font('Montserrat', normal, 600, '../fonts/Montserrat-SemiBold.woff2');
+@include font('Teko', normal, 700, '../fonts/Teko-Bold.woff2');
+@include font('Teko', normal, 600, '../fonts/Teko-SemiBold.woff2');
+@include font('Teko', normal, 600, '../fonts/Teko-Medium.woff2');
+@include font('Teko', normal, 600, '../fonts/Teko-Regular.woff2');
 
 // GENERAL DOCUMENT STYLES
 
@@ -51,7 +55,12 @@ input, textarea {
 	&:required:valid { border-color: green }
 }
 
+* {
+	box-sizing: border-box;
+}
+
 body {
+	margin: 0;
 	font-family: $roboto;
 	font-size: $fontsize;
 	min-width: 320px;
@@ -59,4 +68,12 @@ body {
 	line-height: 1.65;
 	overflow-x: hidden;
 	color: $textcolor;
+}
+.container {
+	max-width: 1060px;
+	margin: 0 auto;
+	padding: 0 15px;	
+}
+.height-100 {
+	height: 100%;
 }
