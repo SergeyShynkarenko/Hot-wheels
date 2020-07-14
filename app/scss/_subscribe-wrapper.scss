@@ -1,35 +1,77 @@
 .subscribe {
-	height: 550px;
 	position: relative;
-	&__img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		object-position: center;
-	}
-	&__overlay {
+	padding: 35px 0;
+
+	&:before {
+		content: "";
 		position: absolute;
 		left: 0;
 		top: 0;
 		width: 100%;
 		height: 100%;
 		background-color: rgba(0, 76, 255, 0.75);
+		z-index: 2;
+	}
+
+	@media (min-width: 540px) {
+		padding: 85px 0;
+	}
+
+	@media (min-width: 768px) {
+		padding: 155px 0;
+	}
+
+	&__img {
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+	&__overlay {
+		position: relative;
+		padding: 0 15px;
+		z-index: 3;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 	}
 	&__title {
-		font-size: 97px;
+		font-size: 36px;
 		font-weight: 700;
 		text-transform: uppercase;
 		line-height: 1;
 		font-family: 'Teko', sans-serif;
-		margin-bottom: 80px;
+		margin-bottom: 20px;
+
+		@media (min-width: 540px) {
+			font-size: 62px;
+			margin-bottom: 40px;
+		}
+
+		@media (min-width: 768px) {
+			font-size: 97px;
+			margin-bottom: 80px;
+		}
+
 	}
 	&__form {
 		display: flex;
-		width: 900px;
+		flex-direction: column;
+		width: 100%;
+
+		@media (min-width: 540px) {
+			flex-direction: row;
+		}
+
+		@media (min-width: 992px) {
+			width: 900px;
+		}
+
 	}
 	&__input {
 		background-color: #fff;
@@ -43,7 +85,8 @@
 		border: none;
 	}
 	&__button {
-		width: 180px;
+		display: inline-block;
+		width: 100%;
 		height: 62px;
 		background-color: #004cff;
 		font-family: 'Montserrat', sans-serif;
@@ -55,6 +98,11 @@
 		color: #fff;
 		cursor: pointer;
 		flex-shrink: 0;
+
+		@media (min-width: 540px) {
+			width: 180px;
+		}
+
 		&:hover {
 			background-color: #3471ff;
 		}

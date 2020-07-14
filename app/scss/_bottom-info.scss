@@ -1,9 +1,25 @@
 .info {
 	&--medium {
-		width: 530px;
+		width: 100%;
+
+		@media (min-width: 740px) {
+			width: 38%;
+		}
+
+		@media (min-width: 1350px) {
+			width: 530px;
+		}
 	}
 	&--large {
-		width: 777px;
+		width: 100%;
+
+		@media (min-width: 740px) {
+			width: 60%;
+		}
+
+		@media (min-width: 1350px) {
+			width: 777px;
+		}
 	}
 }
 .bottom-info {
@@ -12,5 +28,10 @@
 	&__row {
 		display: flex;
 		justify-content: space-between;
+		flex-direction: column;
+
+		@media (min-width: 740px) {
+			flex-direction: row;
+		}
 	}
 }
